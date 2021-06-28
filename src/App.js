@@ -1,17 +1,17 @@
 //import logo from './logo.svg';
 //import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
+import Home from './components/Home.js';
 
 function App() {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-12">
-          <div className="text-center">
-            <h3 className="display-2">RODE</h3>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path='/' component={Home}/>
+      </Switch>
+    </Router>
   );
 }
 
