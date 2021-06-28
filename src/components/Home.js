@@ -1,6 +1,7 @@
 import React from 'react';
 
 import AppNavbar from './AppNavbar';
+import RegisterUser from './RegisterUser';
 
 class Home extends React.Component{
     render(){
@@ -8,7 +9,8 @@ class Home extends React.Component{
             <div className="container">
                 <div className="row">
                     <div className="col-sm-12">
-                        <AppNavbar/>                        
+                        <AppNavbar/>      
+                        <RegisterUser/>                  
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 
 class RegisterUser extends React.Component{
     emptyUser = {
@@ -31,7 +32,7 @@ class RegisterUser extends React.Component{
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify.push('/users')
+            body: JSON.stringify(user)
         });
         this.props.history.push('/users');
     }
@@ -72,3 +73,5 @@ class RegisterUser extends React.Component{
         );
     }
 }
+
+export default withRouter(RegisterUser);
