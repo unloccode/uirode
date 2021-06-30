@@ -24,17 +24,18 @@ class RegisterUser extends React.Component{
         this.setState({user});
     }
     async handleSubmit(e){
+        //console.log("Test");
+        //console.log(this.state.user);
         e.preventDefault();
-        const {user} = this.state;
         await fetch(`/api/user`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(user)
+            body: JSON.stringify(this.state.user)
         });
-        this.props.history.push('/users');
+        this.props.history.push('/users');    
     }
     render(){
         const {user} = this.state;
